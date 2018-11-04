@@ -8,10 +8,7 @@ const sequelize = new Sequelize(
 )
 */
 
-const sequelize = new Sequelize(process.env.POSTGRES, {
-  dialect: "postgres",
-  operatorsAliases: false
-})
+const sequelize = new Sequelize(process.env.POSTGRES, { dialect: "postgres" })
 
 const Kaynti = sequelize.import("./kaynti")
 const Laiva = sequelize.import("./laiva")
